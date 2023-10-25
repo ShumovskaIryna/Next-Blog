@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import ThemeToggle from "../themeToggle/ThemeToggle";
+import AuthLinks from "../authLinks/AuthLinks";
 
 const Navbar = () => {
   return (
@@ -14,6 +16,7 @@ const Navbar = () => {
       </div>
       <div className={styles.logo}>PandaBlog</div>
       <div className={styles.links}>
+        <ThemeToggle />
         <Link href="/" className={styles.link}>
           Homepage
         </Link>
@@ -23,6 +26,7 @@ const Navbar = () => {
         <Link href="/" className={styles.link}>
           About
         </Link>
+        <AuthLinks />
       </div>
     </div>
   );
