@@ -7,7 +7,7 @@ import { useState } from "react";
 const AuthLinks = () => {
   const [open, setOpen] = useState(false);
 
-  const status = "unauthenticated";
+  const status = "authenticated";
 
   return (
     <>
@@ -31,8 +31,8 @@ const AuthLinks = () => {
       {open && (
         <div className={styles.responsiveMenu}>
           <Link href="/">Homepage</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
           {status === "notauthenticated" ? (
             <Link href="/login">Login</Link>
           ) : (
