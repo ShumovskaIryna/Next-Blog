@@ -1,11 +1,25 @@
 import prisma from "../../../utils/connect";
 import { NextResponse } from "next/server";
 
-export const GET = async () => {
-  try {
-    const posts = await prisma.post.findMany();
+export const GET = async (req) => {
+  const { searchParams } = new URL(req.url);
 
-    return new NextResponse(JSON.stringify(posts, { status: 200 }));
+  const page = searchParams.get("page");
+
+  const POST_PER_PAGE = 2;
+
+  const query = {
+    take: POST_PER_PAGE,
+  }
+
+  try {
+    const [posts, count] = await prisma.$transaction([
+      prisma.post.findMany(query),
+      prisma.post.count()
+    ]
+    );
+
+    return new NextResponse(JSON.stringify({posts, count}, { status: 200 }));
   } catch (err) {
     console.log(err);
     return new NextResponse(
