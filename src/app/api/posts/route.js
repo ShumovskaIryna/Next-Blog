@@ -6,16 +6,18 @@ export const GET = async (req) => {
 
   const page = searchParams.get("page");
 
-  const POST_PER_PAGE = 2;
+  const POST_PER_PAGE = 3;
 
   const query = {
     take: POST_PER_PAGE,
+    skip: POST_PER_PAGE * (page - 1),
   }
 
   try {
     const [posts, count] = await prisma.$transaction([
       prisma.post.findMany(query),
-      prisma.post.count()
+      prisma.post.count(
+        ),
     ]
     );
 
