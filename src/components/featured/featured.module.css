@@ -8,7 +8,7 @@
   }
   
   .post {
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
     align-items: center;
     gap: 50px;
@@ -16,7 +16,7 @@
   
   .imgContainer {
     flex: 1;
-    height: 400px;
+    height: 380px;
     position: relative;
   }
   
