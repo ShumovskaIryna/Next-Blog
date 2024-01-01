@@ -20,11 +20,11 @@
   border-radius: 10px;
 }
 
-.category.style {
+.category.sport {
   background-color: #57c4ff31;
 }
 
-.category.fashion {
+.category.entertaiment {
   background-color: #da85c731;
 }
 
@@ -36,7 +36,7 @@
   background-color: #ff795736;
 }
 
-.category.culture {
+.category.study {
   background-color: #ffb04f45;
 }
 

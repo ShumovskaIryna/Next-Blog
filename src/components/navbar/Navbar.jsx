@@ -14,19 +14,12 @@ const Navbar = () => {
         <Image src="/linkedin.png" alt="linkedin" width={24} height={24} />
         <Image src="/github.png" alt="github" width={24} height={24} />
       </div>
-      <div className={styles.logo}>PandaBlog</div>
+      <Link href="/" className={styles.logo}>
+        PandaBlog
+      </Link>
       <div className={styles.links}>
-        <ThemeToggle />
-        <Link href="/" className={styles.link}>
-          Homepage
-        </Link>
-        <Link href="/" className={styles.link}>
-          Contact
-        </Link>
-        <Link href="/" className={styles.link}>
-          About
-        </Link>
         <AuthLinks />
+        <ThemeToggle />
       </div>
     </div>
   );
