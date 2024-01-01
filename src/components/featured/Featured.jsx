@@ -20,6 +20,11 @@ const Featured = () => {
             Being self-motivated, I appreciate collective efforts and
             collaborate productively within group settings. What is more, I am
             highly motivated in web applications development.
+            <br />
+            * JavaScript, ReactJS and VueJS.
+            <br />* I have practice with HTML5, CSS3 and CSS preprocessors,
+            TypeScript, Redux, Redux-Thunk, Redux-saga, Mongodb, Express,
+            Mongoose, Bootstrap, jQuery, Jest, Node.js, REST API.
           </p>
         </div>
       </div>
