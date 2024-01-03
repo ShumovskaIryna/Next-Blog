@@ -2,13 +2,16 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    color: var(--textColor);
   }
   
   .select{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding: 10px 20px;
-    margin-left: 50px;
+    margin-left: 20px;
     width: max-content;
+    background-color: var(--bg);
+    border: none;
   }
   
   .editor {
@@ -21,7 +24,7 @@
   .button,
   .addButton {
     width: 36px;
-    height: 36px;
+    height: 32px;
     border-radius: 50%;
     background-color: transparent;
     border: 1px solid var(--textColor);
@@ -46,8 +49,8 @@
   }
   
   .input{
-    padding: 50px;
-    font-size: 64px;
+    padding: 20px;
+    font-size: 52px;
     border: none;
     outline: none;
     background-color: transparent;
@@ -55,7 +58,7 @@
   }
   
   .input::placeholder{
-    color: #b3b3b1;
+    color: #8484848c;
   }
   
   .textArea {
