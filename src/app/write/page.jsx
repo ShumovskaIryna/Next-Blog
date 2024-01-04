@@ -24,7 +24,7 @@ const WritePage = () => {
   const [file, setFile] = useState(null);
   const [media, setMedia] = useState("");
   const [title, setTitle] = useState("");
-  const [categorySlug, setCategorySlug] = useState("");
+  const [catSlug, setCatSlug] = useState("");
 
   useEffect(() => {
     const storage = getStorage(app);
@@ -83,10 +83,14 @@ const WritePage = () => {
         desc: value,
         img: media,
         slug: slugify(title),
-        categorySlug: categorySlug || "entertaiment", //If not selected, choose the general category
+        catSlug: catSlug || "entertaiment", //If not selected, choose the general category
       }),
     });
-    console.log(res);
+
+    if (res.status === 200) {
+      const data = await res.json();
+      router.push(`/posts/${data.slug}`);
+    }
   };
 
   return (
@@ -99,7 +103,7 @@ const WritePage = () => {
       />
       <select
         className={styles.select}
-        onChange={(e) => setCategorySlug(e.target.value)}
+        onChange={(e) => setCatSlug(e.target.value)}
       >
         <option value="entertaiment">entertaiment</option>
         <option value="study">study</option>
