@@ -24,7 +24,7 @@ const CardList = async ({ page, cat }) => {
   const POST_PER_PAGE = 2;
 
   const hasPrev = POST_PER_PAGE * (page - 1) > 0;
-  const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
+  const hasNext = POST_PER_PAGE * page + POST_PER_PAGE < count;
 
   return (
     <div className={styles.container}>

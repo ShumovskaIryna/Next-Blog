@@ -14,15 +14,23 @@ const Footer = () => {
         </div>
         <p className={styles.desc}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-          necessitatibus similique aspernatur obcaecati veritatis. Aperiam cum
-          porro sequi, totam minima consequuntur, aspernatur deleniti vero
-          repellendus dorales.
+          necessitatibus similique aspernatur obcaecati veritatis.
         </p>
         <div className={styles.icons}>
-          <Image src="/facebook.png" alt="facebook" width={24} height={24} />
-          <Image src="/instagram.png" alt="instagram" width={24} height={24} />
-          <Image src="/linkedin.png" alt="linkedin" width={24} height={24} />
-          <Image src="/github.png" alt="github" width={24} height={24} />
+          <Link href="https://www.instagram.com/_junior_pandaa_/">
+            <Image
+              src="/instagram.png"
+              alt="instagram"
+              width={24}
+              height={24}
+            />
+          </Link>
+          <Link href="https://www.linkedin.com/in/iryna-shumovska-3bb58422b/">
+            <Image src="/linkedin.png" alt="linkedin" width={24} height={24} />
+          </Link>
+          <Link href="https://github.com/ShumovskaIryna">
+            <Image src="/github.png" alt="github" width={24} height={24} />
+          </Link>
         </div>
       </div>
       <div className={styles.links}>
@@ -30,22 +38,21 @@ const Footer = () => {
           <span className={styles.listTitle}>Links</span>
           <Link href="/">Homepage</Link>
           <Link href="/">Blog</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Tags</span>
-          <Link href="/">Style</Link>
-          <Link href="/">Fashion</Link>
-          <Link href="/">Coding</Link>
-          <Link href="/">Travel</Link>
+          <Link href="http://localhost:3000/blog?cat=coding">Coding</Link>
+          <Link href="http://localhost:3000/blog?cat=travel">Travel</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>
-          <Link href="/">Facebook</Link>
-          <Link href="/">Instagram</Link>
-          <Link href="/">Linkedin</Link>
-          <Link href="/">Github</Link>
+          <Link href="https://www.instagram.com/_junior_pandaa_/">
+            Instagram
+          </Link>
+          <Link href="https://www.linkedin.com/in/iryna-shumovska-3bb58422b/">
+            Linkedin
+          </Link>
+          <Link href="https://github.com/ShumovskaIryna">Github</Link>
         </div>
       </div>
     </div>
