@@ -16,7 +16,7 @@
   
   .imgContainer {
     flex: 1;
-    height: 380px;
+    height: 340px;
     position: relative;
   }
   
@@ -63,6 +63,11 @@
   @media screen and (max-width: 768px) {
     .title {
       font-size: 36px;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .title {
+      font-size: 28px;
     }
     .imgContainer {
       display: none;
